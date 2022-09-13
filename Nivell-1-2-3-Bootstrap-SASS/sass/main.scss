@@ -1,0 +1,252 @@
+// Override colors
+
+$primary: #5265E1;
+$secondary: #FA5959;
+$color-font: #a4a2a2;
+$accordion-button-icon: url(/img/icon-arrow.svg);
+
+//Import Boostrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// CSS Styles
+body {
+    max-width: 1200px;
+    margin:auto;
+}
+.nav-link {
+    color: $color-font;
+}
+.btn {
+    color: white;
+}
+#button-grey{
+    color: rgb(83, 80, 80);
+}
+p {
+    color: $color-font;
+}
+.sec-features {
+    margin-top: 10rem;
+}
+.tabs {
+margin: 5rem;
+    ul {
+        li {
+            width: 20%;
+            a {
+                color: $color-font;
+                font-weight: 600;
+                font-size: large;
+                border-bottom: solid 1px $color-font;
+                text-align: center;
+            }
+            a:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+#first-tab li.active a {
+    border-bottom: solid 2px $secondary;
+}
+
+// Creació de les taques blaves:
+.uno {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.dos {
+    position: absolute;
+    left: 0;
+    top: 80rem;
+    width: 30rem;   
+}
+.tres {
+    height: 20rem;
+}
+.cuatro {
+    padding: 5rem;
+}
+.uno1{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.dos2 {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 30rem;   
+}
+.tres3 {
+    height: 20rem;
+}
+.cuatro4 {
+    padding: 7rem;
+    margin-left: -7rem;
+}
+// Fi taques blaves
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    border: none;
+}
+.btn-card {
+    padding: 0.75rem  2.75rem;
+    text-align: justify;
+}
+.download {
+    margin-top: 10rem;
+}
+.sec-cards {
+    margin-top: 5rem; 
+    height: 25rem;
+}
+.last-card {
+    margin-top: 6rem; 
+}
+.sec-faqs {
+    margin-top: 10rem;
+}
+.footer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5265E1;
+    padding: 5rem;
+    color: white;
+    p {
+        color: white;
+        letter-spacing: 0.25rem;
+    }
+}
+.footer2 {
+    background-color: rgb(4, 4, 82);
+    padding: 2rem;
+    .bookmark-icon {
+        filter: brightness(0) invert(1);
+    }
+}
+
+// Modificar estat actiu on hover
+
+.nav-link:hover {
+    cursor: pointer;
+    color:#FA5959;
+}
+.btn1:hover {
+    cursor: pointer;
+    color:#FA5959;
+    background-color: white;
+}
+.btn2:hover {
+    cursor: pointer;
+    color: $primary;
+    background-color: white;
+}
+.btn3:hover {
+    cursor: pointer;
+    color: grey;
+    background-color: white;
+}
+.btn4:hover {
+    background-color:white;
+    color:#FA5959;
+}
+.card2 button:hover {
+    cursor: pointer;
+    color: $primary;
+    background-color: white;
+    
+} 
+.accordion-button:hover {
+    cursor: pointer;
+    color: $secondary;
+    background-color: white;
+}
+.iconos a:hover {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
+
+//--- Responsive ----
+
+@media (max-width: 999px) {
+    .manager {
+        flex-direction: column-reverse;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }    
+        }
+        div {
+            .uno1 {
+                width: 90%;
+            }
+            .dos2 {
+                display: none;          
+            }
+        }
+    }
+    .tabs {
+        .nav {
+            flex-direction: column;
+            align-items: center;
+            li {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+    .img2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .uno {
+            width: 60vw;
+        }
+        .dos {
+            display: none;
+        }
+    }
+    .bookmark {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }  
+    .cards {
+        height: auto;
+        .card1, .card2, .last-card{
+            display: flex;
+            justify-content: center;
+        }
+        .last-card {
+            margin-top: 3rem;
+        }
+    }
+    .accordion {
+        width: 90%;
+    }
+    .faqs-btn {
+        width: 40%;
+    }
+    .prueba {
+        display: flex;
+        justify-content: center;
+
+    }
+}
