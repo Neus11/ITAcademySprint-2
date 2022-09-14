@@ -3,7 +3,10 @@
 $primary: #5265E1;
 $secondary: #FA5959;
 $color-font: #a4a2a2;
-$accordion-button-icon: url(/img/icon-arrow.svg);
+$accordion-button-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$primary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$secondary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>");
+
+
 
 //Import Boostrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -13,8 +16,14 @@ body {
     max-width: 1200px;
     margin:auto;
 }
+.navbar {
+    background-color: white;
+}
 .nav-link {
     color: $color-font;
+}
+.manag {
+    margin-top: 10rem;
 }
 .btn {
     color: white;
@@ -25,9 +34,11 @@ body {
 p {
     color: $color-font;
 }
+
 .sec-features {
     margin-top: 10rem;
 }
+
 .tabs {
 margin: 5rem;
     ul {
